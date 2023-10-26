@@ -10,19 +10,23 @@
         <label>Enter your chosen location:</label>
         <input type="text" name="location" />
         <button type="submit" value="Submit">Submit</button>
-        <p class="note">Form accepts the location in the following format: city and state (Los Angeles, CA), a longitude and latitude (e.g., -31.4173391,-64.183319) , or an IP address (e.g., 82.111.111.111)</p>
+        <p class="note">
+          Form accepts the location in the following format: city and state (Los
+          Angeles, CA), a longitude and latitude (e.g., -31.4173391,-64.183319)
+          , or an IP address (e.g., 82.111.111.111)
+        </p>
       </form>
     </div>
-    <%if(locals.place){%>
+    <%if(locals.requested_location){%>
     <div class="card">
-      Time in your chosen place: <%=time%> <br />
-      Timezone in your chosen place: <%=timezone%>
+      Your chosen place: <%=requested_location%><br />
+      Time : <%=datetime%> <br />
+      Timezone: <%=timezone_name%>
+    </div>
+    <%}%> <%if(locals.error){%>
+    <div class="card"><%=error%><br/>
+        <%=message%>
     </div>
     <%}%>
-    <%if(locals.error){%>
-        <div class="card">
-          <%=error%>
-        </div>
-        <%}%>
   </body>
 </html>
