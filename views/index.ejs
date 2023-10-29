@@ -3,9 +3,11 @@
   <head>
     <title>All about time</title>
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body>
-    <div class="card">
+  <body class="demo-wrap">
+    <h1>Timezone finder</h1>
+    <div class="card form">
       <form>
         <label>Enter your chosen location:</label>
         <input type="text" name="location" />
@@ -18,14 +20,16 @@
       </form>
     </div>
     <%if(locals.requested_location){%>
-    <div class="card">
+    <div class="card location w">
       Your chosen place: <%=requested_location%><br />
       Time : <%=datetime%> <br />
       Timezone: <%=timezone_name%>
     </div>
+    <img src="../public/images/Timezones.png">
     <%}%> <%if(locals.error){%>
-    <div class="card"><%=error%><br/>
-        <%=message%>
+    <div class="card">
+      <%=error%><br />
+      <%=message%>
     </div>
     <%}%>
   </body>

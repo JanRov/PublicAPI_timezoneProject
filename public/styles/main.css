@@ -1,14 +1,23 @@
 body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+  background: url("../images/Timezones.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff2cc80;
 }
-.card{
-    width: var(--card-width);
+.h1 {
+  font-size: 5em;
+}
+.card {
+  background-color: #ffd96680;
+  width: var(--card-width);
   height: var(--card-height);
   padding: 3px;
   position: relative;
@@ -19,7 +28,11 @@ body {
   display: flex;
   font-size: 1.5em;
   padding: 15px;
+  max-width: 70vh;
+  margin-bottom: 40px;
+  border-radius: 15%;
+  border: 2px solid #ffd966;
 }
-.note{
-    font-size: 0.8em !important; 
+.note {
+  font-size: 0.8em !important;
 }
