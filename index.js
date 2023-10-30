@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
-const API_KEY = "efe6f6243a23432091834636b8881af7";
+//const API_KEY = "efe6f6243a23432091834636b8881af7";
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -46,7 +46,7 @@ app.get("/", async (req, res) => {
       "https://timezone.abstractapi.com/v1/current_time",
       {
         params: {
-          api_key: API_KEY,
+          api_key: config.apiKey,
           location: req.query.location,
         },
       }
