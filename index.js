@@ -1,10 +1,10 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import {config} from "./config.js";
 
 const app = express();
 const port = 3000;
-//const API_KEY = "efe6f6243a23432091834636b8881af7";
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
